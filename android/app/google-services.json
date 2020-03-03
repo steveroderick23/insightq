@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "625584040905",
+    "firebase_url": "https://insightq-54399.firebaseio.com",
+    "project_id": "insightq-54399",
+    "storage_bucket": "insightq-54399.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625584040905:android:86ce1aafb5614bb97a5618",
+        "android_client_info": {
+          "package_name": "org.sbs.apps.insightq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625584040905-0u0ee6in8mqv7f1t1posahvgslnrq15q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_bfcdX-FaqSfgpZGDoN3H_SQ3yQRixa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625584040905-0u0ee6in8mqv7f1t1posahvgslnrq15q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,2 @@
+ClientID: 625584040905-n5a0ohogaj818h7iuq73ohepu3old8ov.apps.googleusercontent.com
+Client Secret: bwzAULqG6zS02uRt4velrt--
