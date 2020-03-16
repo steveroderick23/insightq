@@ -1,7 +1,7 @@
-import 'package:insightq/src/models/ScreenInfo.dart';
 import 'package:flutter/material.dart';
+import 'package:insightq/src/models/screen_info.dart';
 
-const Map<String, String> formTypes = {"PWRE": "PWRE - Patient-Rated Wrist Evaluation", "DASS": "DASS - Depression Anxiety Stress Scales"};
+const Map<String, String> formTypes = {"PRWE": "PRWE - Patient-Rated Wrist Evaluation"};
 
 typedef void BuildContextCallback(String routeName);
 
@@ -12,51 +12,43 @@ enum DialogActions {
   agree,
 }
 
-int calculateCrossAxisCount(ScreenInfo screenInfo)
-{
+int calculateCrossAxisCount(ScreenInfo screenInfo) {
   int count = (screenInfo.screenWidth / 400).floor();
   return count == 0 ? 1 : count;
 }
 
-double calculateStaggeredGridScaleMultiplier(MediaQueryData media)
-{
+double calculateStaggeredGridScaleMultiplier(MediaQueryData media) {
   if (media.orientation == Orientation.landscape)
     return media.size.width / 100;
   else
     return media.size.height / 100;
 }
 
-double calculateVerticalScaleMultiplier(MediaQueryData media)
-{
-  if (media.orientation == Orientation.landscape)
-    return media.size.width / 100;
-  else
-    return media.size.height / 100;
-}
-
-double calculateHorizontalScaleMultiplier(MediaQueryData media)
-{
+double calculateVerticalScaleMultiplier(MediaQueryData media) {
   if (media.orientation == Orientation.landscape)
     return media.size.height / 100;
   else
     return media.size.width / 100;
 }
 
-double calculateBlockSizeVertical(MediaQueryData media)
-{
+double calculateHorizontalScaleMultiplier(MediaQueryData media) {
+  if (media.orientation == Orientation.landscape)
+    return media.size.width / 100;
+  else
+    return media.size.height / 100;
+}
+
+double calculateBlockSizeVertical(MediaQueryData media) {
   return media.size.height / 100;
 }
 
-double calculateBlockSizeHorizontal(MediaQueryData media)
-{
+double calculateBlockSizeHorizontal(MediaQueryData media) {
   return media.size.width / 100;
 }
 
-double calculateTextScaleMultiplier(MediaQueryData media)
-{
+double calculateTextScaleMultiplier(MediaQueryData media) {
   if (media.orientation == Orientation.landscape)
     return media.size.height / 100;
   else
     return media.size.width / 100;
 }
-
