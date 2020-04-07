@@ -14,8 +14,7 @@ Future<File> writeToPdf(mat.BuildContext context, PrweModel prweModel) async {
   var dateString = new DateFormat("y-M-d").format(new DateTime.now());
   var printedTimestamp = new DateFormat("y-M-d hh:mm:ss").format(new DateTime.now());
 
-  Map<PermissionGroup, PermissionStatus> permissions = await PermissionHandler().requestPermissions([PermissionGroup.storage]);
-  if (permissions.containsKey(PermissionGroup.storage) && permissions[PermissionGroup.storage] == PermissionStatus.granted) {
+  if (await Permission.storage.request().isGranted) {
     final Document pdf = Document();
 
     List<Widget> widgetList = List<Widget>();
